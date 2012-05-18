@@ -1,0 +1,11 @@
+# Byte-compiled Python files
+*.pyc
+
+# Ignore all environment-specific settings files
+settings/*
+!settings/__init__.py
+!settings/env_example.py
+
+# Static and user-uploaded media files
+_media/
+_static/
