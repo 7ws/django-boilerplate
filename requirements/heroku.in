@@ -1,0 +1,3 @@
+-r production.in
+gunicorn
+whitenoise

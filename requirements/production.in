@@ -1,0 +1,8 @@
+dj-database-url
+dj-email-url
+Django
+django-configurations
+djangorestframework
+honcho
+psycopg2
+python-dotenv

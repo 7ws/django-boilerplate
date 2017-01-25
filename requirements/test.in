@@ -1,0 +1,5 @@
+coverage
+model-mommy
+pytest
+pytest-django
+python-dateutil

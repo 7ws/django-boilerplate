@@ -1,11 +1,25 @@
-# Byte-compiled Python files
-*.pyc
+# Python byte-compiled files
+*.py[co]
+__pycache__/
 
-# Ignore all environment-specific settings files
-settings/*
-!settings/__init__.py
-!settings/env_example.py
+# OS and editor files
+.DS_Store
+.idea
+.vscode
+*.swp*
+*~
+*.tmproj
 
-# Static and user-uploaded media files
-_media/
-_static/
+# Cache and log files
+*.log
+.cache
+.coverage
+tmp
+
+# Environment configuration
+.env
+requirements/local.*
+
+# Static and media
+_media
+_static
