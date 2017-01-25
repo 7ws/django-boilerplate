@@ -1,0 +1,38 @@
+{
+  "name": "my-project",
+  "description": "This project does nothing useful. Yet.",
+  "repository": "https://github.com/7ws/django-boilerplate/",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "addons": [
+    "heroku-postgresql",
+    "sendgrid"
+  ],
+  "env": {
+    "ENVIRONMENT": {
+      "description": "The environment configuration to use (see `settings/`).",
+      "value": "Development"
+    },
+    "DJANGO_DEBUG": {
+      "description": "Debug mode for the Django app (overrides environment settings).",
+      "value": "True"
+    },
+    "DJANGO_SECRET_KEY": {
+      "description": "A secret key for salting security stuff.",
+      "generator": "secret"
+    },
+    "EMAIL_URL": {
+      "description": "URL with email connection parameters.",
+      "value": "smtp://user@domain.com:pass@smtp.example.com:465/?ssl=True"
+    }
+  }
+}
