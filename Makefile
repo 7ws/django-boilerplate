@@ -1,6 +1,3 @@
-REQUIREMENTS_LOCAL_IN = requirements/local.in
-
-
 pip-compile:
 	## Update requirements/*.txt with latest packages from requirements/*.in
 	echo "Installing/upgrading pip-tools..."
@@ -13,9 +10,9 @@ pip-compile:
 
 	echo "Compiling test requirements..."
 	pip-compile -U -o requirements/test.txt requirements/production.in requirements/test.in
-ifneq (, $(wildcard $(REQUIREMENTS_LOCAL_IN)))
-	pip-compile -U $(REQUIREMENTS_LOCAL_IN)
-endif
+
+	echo "Compiling local user-defined requirements"
+	test -s requirements/local.in && pip-compile -U requirements/local.in
 
 
 install-dev-requirements:
